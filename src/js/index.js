@@ -25,8 +25,6 @@ async function includes() {
     await include_html("/src/html/header.html", "body", false);
 
     await include_html("/src/html/content.html", "body", false);
-
-    await include_html("/src/html/footer.html", "body", false);
 }
 
 async function styles() {
@@ -36,7 +34,6 @@ async function styles() {
 
     await include_css("/src/css/header.css");
     await include_css("/src/css/body.css");
-    await include_css("/src/css/footer.css");
 }
 
 async function pages() {
