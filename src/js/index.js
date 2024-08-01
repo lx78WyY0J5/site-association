@@ -48,7 +48,7 @@ async function pages() {
     else if (pathNameMatchPage("/news", false) && await pageNews()) { }
 
     else {
-        await includes();
+        /* await includes();
 
         await include_css("https://lx78wyy0j5.github.io/site-association/src/css/404.css");
         await include_html("https://lx78wyy0j5.github.io/site-association/src/html/content/404.html", "contentArticle", true);
@@ -56,7 +56,7 @@ async function pages() {
 
         if (pathNameMatchPage("/404", true)) {
             await include_html("https://lx78wyy0j5.github.io/site-association/src/html/content/404-custom.html", "erreur", true);
-        }
+        } */
     }
 }
 
