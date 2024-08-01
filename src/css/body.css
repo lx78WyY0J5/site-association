@@ -1,6 +1,9 @@
 html{
 }
 
+#content{
+}
+
 #video-background{
     position: fixed;
     top: 0;
@@ -12,18 +15,12 @@ html{
 }
 
 #contentArticle{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
 
     color: white;
-    width: 80vw;
-    
-    margin-left: 10vw;
-    margin-right:10vw;
+    width: 100vw;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 }

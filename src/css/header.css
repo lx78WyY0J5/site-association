@@ -1,8 +1,10 @@
 header {
     position: sticky;
     top: 0;
+    left: 0;
+    right: 0
 
-    width: 100%;
+    width: 100vw;
 
     text-align: center;
 
@@ -42,4 +44,10 @@ header>nav#navlinklist>a>p,
 header>nav#navlinklist>a>h1{
     font-size: xx-large;
     font-weight: bolder;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        position: relative;
+    }
 }
