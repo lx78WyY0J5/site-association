@@ -43,9 +43,9 @@ async function pages() {
         await include_css("https://lx78wyy0j5.github.io/site-association/src/css/home.css");
     }
 
-    else if (pathNameMatchPage("/racing", false) && await pageRacing()) { }
-    else if (pathNameMatchPage("/events", false) && await pageEvents()) { }
-    else if (pathNameMatchPage("/news", false) && await pageNews()) { }
+    else if (pathNameMatchPage("site-association//racing", false) && await pageRacing()) { }
+    else if (pathNameMatchPage("site-association//events", false) && await pageEvents()) { }
+    else if (pathNameMatchPage("site-association//news", false) && await pageNews()) { }
 
     else {
         /* await includes();
