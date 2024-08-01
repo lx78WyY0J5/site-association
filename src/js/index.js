@@ -22,25 +22,25 @@ async function includes() {
 
     console.info("Loading includes");
 
-    await include_html("/site-association/src/html/header.html", "body", false);
+    await include_html("./src/html/header.html", "body", false);
 
-    await include_html("/site-association/src/html/content.html", "body", false);
+    await include_html("./src/html/content.html", "body", false);
 }
 
 async function styles() {
     console.info("Loading style");
 
-    await include_css("/site-association/src/css/user-agent.css");
+    await include_css("./src/css/user-agent.css");
 
-    await include_css("/site-association/src/css/header.css");
-    await include_css("/site-association/src/css/body.css");
+    await include_css("./src/css/header.css");
+    await include_css("./src/css/body.css");
 }
 
 async function pages() {
     console.info("Loading custom page");
     if (pathNameMatchPage("/", true) || pathNameMatchPage("/index", true)) {
-        await include_html("/site-association/src/html/home.html", "contentArticle", true);
-        await include_css("/site-association/src/css/home.css");
+        await include_html("./src/html/home.html", "contentArticle", true);
+        await include_css("./src/css/home.css");
     }
 
     else if (pathNameMatchPage("/racing", false) && await pageRacing()) { }
@@ -50,12 +50,12 @@ async function pages() {
     else {
         await includes();
 
-        await include_css("/site-association/src/css/404.css");
-        await include_html("/site-association/src/html/content/404.html", "contentArticle", true);
+        await include_css("./src/css/404.css");
+        await include_html("./src/html/content/404.html", "contentArticle", true);
         console.warn("Erreur : 404");
 
         if (pathNameMatchPage("/404", true)) {
-            await include_html("/site-association/src/html/content/404-custom.html", "erreur", true);
+            await include_html("./src/html/content/404-custom.html", "erreur", true);
         }
     }
 }
@@ -85,13 +85,13 @@ function getShortPathname() {
 }
 
 async function pageRacing() {
-
+    return true;
 }
 
 async function pageEvents() {
-
+    return true;
 }
 
 async function pageNews() {
-
+    return true;
 }
